@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DF90D8E155976C10007A0AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF90D8D155976C10007A0AD /* Cocoa.framework */; };
+		7DF90D98155976C10007A0AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DF90D96155976C10007A0AD /* InfoPlist.strings */; };
+		7DF90D9A155976C10007A0AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF90D99155976C10007A0AD /* main.m */; };
+		7DF90D9E155976C10007A0AD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF90D9C155976C10007A0AD /* Credits.rtf */; };
+		7DF90DA1155976C10007A0AD /* IMUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF90DA0155976C10007A0AD /* IMUAppDelegate.m */; };
+		7DF90DA4155976C20007A0AD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DF90DA2155976C20007A0AD /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7DF90D89155976C10007A0AD /* IMU2OSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMU2OSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF90D8D155976C10007A0AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7DF90D90155976C10007A0AD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7DF90D91155976C10007A0AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7DF90D92155976C10007A0AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7DF90D95155976C10007A0AD /* IMU2OSC-Info.plist */ = {isa = PBXFileReference; path = "IMU2OSC-Info.plist"; sourceTree = "<group>"; };
+		7DF90D97155976C10007A0AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DF90D99155976C10007A0AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7DF90D9B155976C10007A0AD /* IMU2OSC-Prefix.pch */ = {isa = PBXFileReference; path = "IMU2OSC-Prefix.pch"; sourceTree = "<group>"; };
+		7DF90D9D155976C10007A0AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7DF90D9F155976C10007A0AD /* IMUAppDelegate.h */ = {isa = PBXFileReference; path = IMUAppDelegate.h; sourceTree = "<group>"; };
+		7DF90DA0155976C10007A0AD /* IMUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMUAppDelegate.m; sourceTree = "<group>"; };
+		7DF90DA3155976C20007A0AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DF90D86155976C10007A0AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF90D8E155976C10007A0AD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DF90D7E155976C10007A0AD = {
+			isa = PBXGroup;
+			children = (
+				7DF90D93155976C10007A0AD /* IMU2OSC */,
+				7DF90D8C155976C10007A0AD /* Frameworks */,
+				7DF90D8A155976C10007A0AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DF90D8A155976C10007A0AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DF90D89155976C10007A0AD /* IMU2OSC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DF90D8C155976C10007A0AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DF90D8D155976C10007A0AD /* Cocoa.framework */,
+				7DF90D8F155976C10007A0AD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DF90D8F155976C10007A0AD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DF90D90155976C10007A0AD /* AppKit.framework */,
+				7DF90D91155976C10007A0AD /* CoreData.framework */,
+				7DF90D92155976C10007A0AD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7DF90D93155976C10007A0AD /* IMU2OSC */ = {
+			isa = PBXGroup;
+			children = (
+				7DF90D9F155976C10007A0AD /* IMUAppDelegate.h */,
+				7DF90DA0155976C10007A0AD /* IMUAppDelegate.m */,
+				7DF90DA2155976C20007A0AD /* MainMenu.xib */,
+				7DF90D94155976C10007A0AD /* Supporting Files */,
+			);
+			path = IMU2OSC;
+			sourceTree = "<group>";
+		};
+		7DF90D94155976C10007A0AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DF90D95155976C10007A0AD /* IMU2OSC-Info.plist */,
+				7DF90D96155976C10007A0AD /* InfoPlist.strings */,
+				7DF90D99155976C10007A0AD /* main.m */,
+				7DF90D9B155976C10007A0AD /* IMU2OSC-Prefix.pch */,
+				7DF90D9C155976C10007A0AD /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DF90D88155976C10007A0AD /* IMU2OSC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DF90DA7155976C20007A0AD /* Build configuration list for PBXNativeTarget "IMU2OSC" */;
+			buildPhases = (
+				7DF90D85155976C10007A0AD /* Sources */,
+				7DF90D86155976C10007A0AD /* Frameworks */,
+				7DF90D87155976C10007A0AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IMU2OSC;
+			productName = IMU2OSC;
+			productReference = 7DF90D89155976C10007A0AD /* IMU2OSC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DF90D80155976C10007A0AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IMU;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Birmingham Conservatoire";
+			};
+			buildConfigurationList = 7DF90D83155976C10007A0AD /* Build configuration list for PBXProject "IMU2OSC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DF90D7E155976C10007A0AD;
+			productRefGroup = 7DF90D8A155976C10007A0AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DF90D88155976C10007A0AD /* IMU2OSC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DF90D87155976C10007A0AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF90D98155976C10007A0AD /* InfoPlist.strings in Resources */,
+				7DF90D9E155976C10007A0AD /* Credits.rtf in Resources */,
+				7DF90DA4155976C20007A0AD /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DF90D85155976C10007A0AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF90D9A155976C10007A0AD /* main.m in Sources */,
+				7DF90DA1155976C10007A0AD /* IMUAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7DF90D96155976C10007A0AD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DF90D97155976C10007A0AD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7DF90D9C155976C10007A0AD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DF90D9D155976C10007A0AD /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7DF90DA2155976C20007A0AD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DF90DA3155976C20007A0AD /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DF90DA5155976C20007A0AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7DF90DA6155976C20007A0AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7DF90DA8155976C20007A0AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
+				INFOPLIST_FILE = "IMU2OSC/IMU2OSC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7DF90DA9155976C20007A0AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
+				INFOPLIST_FILE = "IMU2OSC/IMU2OSC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DF90D83155976C10007A0AD /* Build configuration list for PBXProject "IMU2OSC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DF90DA5155976C20007A0AD /* Debug */,
+				7DF90DA6155976C20007A0AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DF90DA7155976C20007A0AD /* Build configuration list for PBXNativeTarget "IMU2OSC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DF90DA8155976C20007A0AD /* Debug */,
+				7DF90DA9155976C20007A0AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DF90D80155976C10007A0AD /* Project object */;
+}

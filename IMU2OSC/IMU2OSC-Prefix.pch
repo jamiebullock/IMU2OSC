@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'IMU2OSC' target in the 'IMU2OSC' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
