@@ -358,6 +358,7 @@
 		7DF90DA8155976C20007A0AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.49.0/include;
@@ -375,6 +376,7 @@
 		7DF90DA9155976C20007A0AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.49.0/include;

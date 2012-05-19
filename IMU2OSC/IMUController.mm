@@ -34,10 +34,9 @@
 {
     self = [super init];
     if (self) {
-        //self->ximu = new XIMU("/foo/bar", XIMU::XIMU_LOGLEVEL_LOG);
-        //[self detectAndGetDeviceId];
         timer = [NSTimer scheduledTimerWithTimeInterval:1.0/24. target:self selector:@selector(tick:) userInfo:nil repeats:YES];
         captureIsOn = false;
+        self->ximu = NULL;
     }
     
     return self;
@@ -106,13 +105,16 @@
 
 // action sent when serial port selected
 - (IBAction) serialPortSelected: (id) cntrl {
-    
+        
     NSString *portName = [serialListPullDown titleOfSelectedItem];
     const char *portName_s = [portName UTF8String];
 	// open the serial port
 	//NSString *error = [self openSerialPort: [serialListPullDown titleOfSelectedItem] baud:[baudInputField intValue]];
-	
-    self->ximu = new XIMU((char *)portName_s, XIMU::XIMU_LOGLEVEL_LOG);
+    [self appendToIncomingText: @"> Attempting to connect to x-IMU"];
+    imuInitialized = self->ximu = new XIMU((char *)portName_s, XIMU::XIMU_LOGLEVEL_DEBUG);
+    if (!imuInitialized) {
+        [self appendToIncomingText: @"> Unable to connect to x-IMU"];        
+    }
     [self detectAndGetDeviceId];
     [self refreshSerialList:portName];
 }

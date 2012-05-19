@@ -191,8 +191,8 @@ bool XIMU::open_port(char *fn, int baudrate){
 	fd=open(fn, O_RDWR | O_NOCTTY);
 	if (fd == -1 ){
 		XIMU_ERROR("failed to open port '%s'\n",fn);
-		exit(-1);
-        }else{
+        return false;        
+    }else{
 		//set serial speed
 		struct termios termOptions;
 		//get the current options:

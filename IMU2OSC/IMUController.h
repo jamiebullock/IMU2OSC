@@ -18,6 +18,7 @@
     NSTimer *timer; 
     
     bool captureIsOn;
+    bool imuInitialized;
     
 }
 
