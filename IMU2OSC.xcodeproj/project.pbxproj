@@ -15,6 +15,7 @@
 		7D44849815669E9600FB759D /* IpEndpointName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D44848815669E9600FB759D /* IpEndpointName.cpp */; };
 		7D44849915669E9600FB759D /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D44848D15669E9600FB759D /* NetworkingUtils.cpp */; };
 		7D44849A15669E9600FB759D /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D44848E15669E9600FB759D /* UdpSocket.cpp */; };
+		7D55D6E81609056500EE3BA6 /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */; };
 		7D7FB248156662AC003C03FC /* IMUOSCHandlers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D7FB247156662AC003C03FC /* IMUOSCHandlers.cpp */; };
 		7DD23213155BE18D00C012B4 /* XIMU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DD23212155BE18D00C012B4 /* XIMU.cpp */; };
 		7DD23215155BF04B00C012B4 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD23214155BF04B00C012B4 /* IOKit.framework */; };
@@ -26,6 +27,18 @@
 		7DF90DA4155976C20007A0AD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DF90DA2155976C20007A0AD /* MainMenu.xib */; };
 		7DF90DB4155979F20007A0AD /* IMUController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7DF90DB3155979F20007A0AD /* IMUController.mm */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7D55D6C91608A57C00EE3BA6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7D20391115664F3900D9DD6E /* IMUDataCallbacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IMUDataCallbacks.cpp; sourceTree = "<group>"; };
@@ -50,6 +63,7 @@
 		7D44848E15669E9600FB759D /* UdpSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UdpSocket.cpp; sourceTree = "<group>"; };
 		7D44848F15669E9600FB759D /* TimerListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerListener.h; sourceTree = "<group>"; };
 		7D44849015669E9600FB759D /* UdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpSocket.h; sourceTree = "<group>"; };
+		7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_thread-mt.a"; sourceTree = "<group>"; };
 		7D7FB247156662AC003C03FC /* IMUOSCHandlers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IMUOSCHandlers.cpp; sourceTree = "<group>"; };
 		7D7FB249156662C5003C03FC /* IMUOSCHandlers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMUOSCHandlers.h; sourceTree = "<group>"; };
 		7DD23211155BE17B00C012B4 /* XIMU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIMU.h; sourceTree = "<group>"; };
@@ -79,6 +93,7 @@
 			files = (
 				7DD23215155BF04B00C012B4 /* IOKit.framework in Frameworks */,
 				7DF90D8E155976C10007A0AD /* Cocoa.framework in Frameworks */,
+				7D55D6E81609056500EE3BA6 /* libboost_thread-mt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +162,7 @@
 		7DF90D8C155976C10007A0AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */,
 				7DD23214155BF04B00C012B4 /* IOKit.framework */,
 				7DF90D8D155976C10007A0AD /* Cocoa.framework */,
 				7DF90D8F155976C10007A0AD /* Other Frameworks */,
@@ -204,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DF90DA7155976C20007A0AD /* Build configuration list for PBXNativeTarget "IMU2OSC" */;
 			buildPhases = (
+				7D55D6C91608A57C00EE3BA6 /* CopyFiles */,
 				7DF90D85155976C10007A0AD /* Sources */,
 				7DF90D86155976C10007A0AD /* Frameworks */,
 				7DF90D87155976C10007A0AD /* Resources */,
@@ -363,9 +380,10 @@
 				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.49.0/include;
 				INFOPLIST_FILE = "IMU2OSC/IMU2OSC-Info.plist";
-				OTHER_LDFLAGS = (
-					"-L/usr/local/Cellar/boost/1.49.0/lib",
-					"-lboost_thread-mt",
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/IMU2OSC-bsnxvbnkuxyobjgqgomlngaeiqbe/Build/Products/Debug/IMU2OSC.app/Contents/Frameworks\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
@@ -381,9 +399,10 @@
 				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.49.0/include;
 				INFOPLIST_FILE = "IMU2OSC/IMU2OSC-Info.plist";
-				OTHER_LDFLAGS = (
-					"-L/usr/local/Cellar/boost/1.49.0/lib",
-					"-lboost_thread-mt",
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/IMU2OSC-bsnxvbnkuxyobjgqgomlngaeiqbe/Build/Products/Debug/IMU2OSC.app/Contents/Frameworks\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
