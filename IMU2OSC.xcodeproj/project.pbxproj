@@ -16,6 +16,7 @@
 		7D44849915669E9600FB759D /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D44848D15669E9600FB759D /* NetworkingUtils.cpp */; };
 		7D44849A15669E9600FB759D /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D44848E15669E9600FB759D /* UdpSocket.cpp */; };
 		7D55D6E81609056500EE3BA6 /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */; };
+		7D55D6FC160913CF00EE3BA6 /* IMU2OSC-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */; };
 		7D7FB248156662AC003C03FC /* IMUOSCHandlers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D7FB247156662AC003C03FC /* IMUOSCHandlers.cpp */; };
 		7DD23213155BE18D00C012B4 /* XIMU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DD23212155BE18D00C012B4 /* XIMU.cpp */; };
 		7DD23215155BF04B00C012B4 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD23214155BF04B00C012B4 /* IOKit.framework */; };
@@ -64,6 +65,7 @@
 		7D44848F15669E9600FB759D /* TimerListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerListener.h; sourceTree = "<group>"; };
 		7D44849015669E9600FB759D /* UdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpSocket.h; sourceTree = "<group>"; };
 		7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_thread-mt.a"; sourceTree = "<group>"; };
+		7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "IMU2OSC-icon.icns"; sourceTree = "<group>"; };
 		7D7FB247156662AC003C03FC /* IMUOSCHandlers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IMUOSCHandlers.cpp; sourceTree = "<group>"; };
 		7D7FB249156662C5003C03FC /* IMUOSCHandlers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMUOSCHandlers.h; sourceTree = "<group>"; };
 		7DD23211155BE17B00C012B4 /* XIMU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIMU.h; sourceTree = "<group>"; };
@@ -142,9 +144,18 @@
 			path = posix;
 			sourceTree = "<group>";
 		};
+		7D55D6F11609088300EE3BA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		7DF90D7E155976C10007A0AD = {
 			isa = PBXGroup;
 			children = (
+				7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */,
+				7D55D6F11609088300EE3BA6 /* Resources */,
 				7DF90D93155976C10007A0AD /* IMU2OSC */,
 				7DF90D8C155976C10007A0AD /* Frameworks */,
 				7DF90D8A155976C10007A0AD /* Products */,
@@ -269,6 +280,7 @@
 				7DF90D98155976C10007A0AD /* InfoPlist.strings in Resources */,
 				7DF90D9E155976C10007A0AD /* Credits.rtf in Resources */,
 				7DF90DA4155976C20007A0AD /* MainMenu.xib in Resources */,
+				7D55D6FC160913CF00EE3BA6 /* IMU2OSC-icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

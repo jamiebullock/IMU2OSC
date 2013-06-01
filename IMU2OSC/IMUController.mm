@@ -24,9 +24,21 @@
     XIMU *ximu;
     
 }
+
+@property (weak) IBOutlet NSTextField *euler1;
+@property (weak) IBOutlet NSTextField *euler2;
+@property (weak) IBOutlet NSTextField *euler3;
+@property (weak) IBOutlet NSTextField *gyro1;
+@property (weak) IBOutlet NSTextField *gyro2;
+@property (weak) IBOutlet NSTextField *gyro3;
+@property (weak) IBOutlet NSTextField *mag1;
+@property (weak) IBOutlet NSTextField *mag2;
+@property (weak) IBOutlet NSTextField *mag3;
+@property (weak) IBOutlet NSTextField *accel1;
+@property (weak) IBOutlet NSTextField *accel2;
+@property (weak) IBOutlet NSTextField *accel3;
+
 @end
-
-
 
 @implementation IMUController
 
@@ -100,7 +112,6 @@
         NSString *msg = [[NSString alloc] initWithFormat:@"> found device with id 0x%04X\n", deviceid];
         [self appendToIncomingText:msg];
     }
-    
 }
 
 // action sent when serial port selected
@@ -155,27 +166,43 @@
     double *accel = data.accel;
     double *mag = data.mag;
     
-    NSString *msg;
+//    NSString *msg;
     
     if (euler != NULL) {
-        msg = [[NSString alloc] initWithFormat:@"> euler:\t%.3f\t%.3f\t%.3f\n",
-                         euler[0], euler[1], euler[2]];
-        [self appendToIncomingText: msg];
+        [self.euler1 setStringValue:[NSNumber numberWithFloat:euler[0]].stringValue];
+        [self.euler2 setStringValue:[NSNumber numberWithFloat:euler[1]].stringValue];
+        [self.euler3 setStringValue:[NSNumber numberWithFloat:euler[2]].stringValue];
+
+//        msg = [[NSString alloc] initWithFormat:@"> euler:\t%.3f\t%.3f\t%.3f\n",
+//                         euler[0], euler[1], euler[2]];
+//        [self appendToIncomingText: msg];
     }
     if (gyro != NULL) {
-       msg = [[NSString alloc] initWithFormat:@"> gyro:\t%.3f\t%.3f\t%.3f\n",
-                         gyro[0], gyro[1], gyro[2]];
-        [self appendToIncomingText: msg];
+        [self.gyro1 setStringValue:[NSNumber numberWithFloat:gyro[0]].stringValue];
+        [self.gyro2 setStringValue:[NSNumber numberWithFloat:gyro[1]].stringValue];
+        [self.gyro3 setStringValue:[NSNumber numberWithFloat:gyro[2]].stringValue];
+
+//       msg = [[NSString alloc] initWithFormat:@"> gyro:\t%.3f\t%.3f\t%.3f\n",
+//                         gyro[0], gyro[1], gyro[2]];
+//        [self appendToIncomingText: msg];
     }
     if (accel != NULL) {
-        msg = [[NSString alloc] initWithFormat:@"> accel:\t%.3f\t%.3f\t%.3f\n",
-               accel[0], accel[1], accel[2]];
-        [self appendToIncomingText: msg];
+        [self.accel1 setStringValue:[NSNumber numberWithFloat:accel[0]].stringValue];
+        [self.accel2 setStringValue:[NSNumber numberWithFloat:accel[1]].stringValue];
+        [self.accel3 setStringValue:[NSNumber numberWithFloat:accel[2]].stringValue];
+
+//        msg = [[NSString alloc] initWithFormat:@"> accel:\t%.3f\t%.3f\t%.3f\n",
+//               accel[0], accel[1], accel[2]];
+//        [self appendToIncomingText: msg];
     }
     if (mag != NULL) {
-        msg = [[NSString alloc] initWithFormat:@"> mag:\t%.3f\t%.3f\t%.3f\n",
-               mag[0], mag[1], mag[2]];
-        [self appendToIncomingText: msg];
+        [self.mag1 setStringValue:[NSNumber numberWithFloat:mag[0]].stringValue];
+        [self.mag2 setStringValue:[NSNumber numberWithFloat:mag[1]].stringValue];
+        [self.mag3 setStringValue:[NSNumber numberWithFloat:mag[2]].stringValue];
+
+//        msg = [[NSString alloc] initWithFormat:@"> mag:\t%.3f\t%.3f\t%.3f\n",
+//               mag[0], mag[1], mag[2]];
+//        [self appendToIncomingText: msg];
     }
 
 }
