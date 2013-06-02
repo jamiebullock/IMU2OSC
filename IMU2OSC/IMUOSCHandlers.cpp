@@ -10,14 +10,25 @@
 
 #include "osc/OscOutboundPacketStream.h"
 #include "ip/UdpSocket.h"
+//#include "IpEndpointName.h"
 
+
+#define OUTPUT_BUFFER_SIZE  1024
 #define ADDRESS "127.0.0.1"
 #define PORT 7000
 
-#define OUTPUT_BUFFER_SIZE  1024
-
 UdpTransmitSocket transmitSocket(IpEndpointName(ADDRESS, PORT));
 
+//void osc_init(const char *address, unsigned int port)
+//{
+//    IpEndpointName endpointName(
+//}
+
+void osc_init(const char *address, unsigned int port)
+{
+    UdpTransmitSocket newTransmitSocket(IpEndpointName(address, port));
+    transmitSocket = newTransmitSocket;
+}
 
 void osc_send_euler(double *euler) {
     

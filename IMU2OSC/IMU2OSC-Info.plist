@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>IMU2OSC-icon</string>
 	<key>CFBundleIdentifier</key>
-	<string>jamiebullock.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.jamiebullock.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

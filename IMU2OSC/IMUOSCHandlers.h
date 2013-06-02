@@ -9,6 +9,7 @@
 #ifndef IMU2OSC_IMUOSCHandlers_h
 #define IMU2OSC_IMUOSCHandlers_h
 
+void osc_init(const char *address, unsigned int port);
 void osc_send_euler(double *euler);
 void osc_send_cal(double *gyro, double *accel, double *mag);
 

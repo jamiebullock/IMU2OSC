@@ -17,13 +17,19 @@
 
 #include "XIMU.h"
 #include "IMUDataCallbacks.h"
+#include "IMUOSCHandlers.h"
 
+#define ADDRESS "127.0.0.1"
+#define PORT 7000
 
 @interface IMUController() {
     
     XIMU *ximu;
     
 }
+
+@property (assign, nonatomic) NSUInteger port;
+@property (strong, nonatomic) NSString *address;
 
 @property (weak) IBOutlet NSTextField *euler1;
 @property (weak) IBOutlet NSTextField *euler2;
@@ -37,6 +43,8 @@
 @property (weak) IBOutlet NSTextField *accel1;
 @property (weak) IBOutlet NSTextField *accel2;
 @property (weak) IBOutlet NSTextField *accel3;
+@property (weak) IBOutlet NSTextField *portTextField;
+@property (weak) IBOutlet NSTextField *ipAddressTextField;
 
 @end
 
@@ -46,17 +54,52 @@
 {
     self = [super init];
     if (self) {
+        
+        NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+//        NSString *val = nil;
+        
+        self.port = PORT;
+        self.address = [NSString stringWithUTF8String:ADDRESS];
+        
+        if (standardUserDefaults)
+        {
+            NSString *storedAddress = [standardUserDefaults stringForKey:@"Address"];
+            NSInteger storedPort = [standardUserDefaults integerForKey:@"Port"];
+            
+            if (storedAddress == NULL)
+            {
+                [standardUserDefaults setObject:self.address forKey:@"Address"];
+            }
+            else
+            {
+                self.port = storedPort;
+            }
+            if (storedPort == 0)
+            {
+                [standardUserDefaults setValue:[NSNumber numberWithLong:self.port] forKey:@"Port"];
+            }
+            else
+            {
+                self.address = storedAddress;
+            }
+            [standardUserDefaults synchronize];
+        }
+                
+        osc_init([self.address UTF8String], (unsigned int)self.port);
+        
         timer = [NSTimer scheduledTimerWithTimeInterval:1.0/24. target:self selector:@selector(tick:) userInfo:nil repeats:YES];
         captureIsOn = false;
         self->ximu = NULL;
     }
-    
+        
     return self;
 }
 
 
 - (void)awakeFromNib {
     [self refreshSerialList:@"Select a Serial Port"];
+    [self.portTextField setStringValue:[NSNumber numberWithLong:self.port].stringValue];
+    [self.ipAddressTextField setStringValue:self.address];
 }
 
 - (void) refreshSerialList: (NSString *) selectedText {
@@ -204,6 +247,40 @@
 //               mag[0], mag[1], mag[2]];
 //        [self appendToIncomingText: msg];
     }
+
+}
+
+- (IBAction)prefsClicked:(id)sender {
+    
+    
+    
+}
+
+- (IBAction)ipSet:(id)sender {
+    
+    NSTextField *textField = (NSTextField *)sender;
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    self.address = [textField stringValue];
+
+    [standardUserDefaults setObject:self.address forKey:@"Address"];
+    [standardUserDefaults synchronize];
+    //create new transmitSocket
+    osc_init([self.address UTF8String], (unsigned int)self.port);
+
+
+    
+}
+
+- (IBAction)portSet:(id)sender {
+    
+    NSTextField *textField = (NSTextField *)sender;
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    self.port = [textField integerValue];
+    
+    [standardUserDefaults setValue:[NSNumber numberWithLong:self.port] forKey:@"Port"];
+    [standardUserDefaults synchronize];
+
+    osc_init([self.address UTF8String], (unsigned int)self.port);
 
 }
 
