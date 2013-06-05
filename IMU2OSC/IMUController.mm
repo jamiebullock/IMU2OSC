@@ -146,14 +146,14 @@
     
     unsigned int deviceid;
     
-    if(!self->ximu->get_device_detected()) {
-        [self appendToIncomingText: @"> no device found"];
-    }
     if (!ximu->get_register(XIMU::REGISTER_ADDRESS_DeviceID, &deviceid)){
         [self appendToIncomingText: @"> ERROR: cant fetch deviceid\n"];
     } else {
         NSString *msg = [[NSString alloc] initWithFormat:@"> found device with id 0x%04X\n", deviceid];
         [self appendToIncomingText:msg];
+    }
+    if(!self->ximu->get_device_detected()) {
+        [self appendToIncomingText: @"> no device found\n"];
     }
 }
 
@@ -164,10 +164,10 @@
     const char *portName_s = [portName UTF8String];
 	// open the serial port
 	//NSString *error = [self openSerialPort: [serialListPullDown titleOfSelectedItem] baud:[baudInputField intValue]];
-    [self appendToIncomingText: @"> Attempting to connect to x-IMU"];
-    imuInitialized = self->ximu = new XIMU((char *)portName_s, XIMU::XIMU_LOGLEVEL_DEBUG);
+    [self appendToIncomingText: @"> Attempting to connect to x-IMU\n"];
+    imuInitialized = self->ximu = new XIMU((char *)portName_s, XIMU::XIMU_LOGLEVEL_NONE);
     if (!imuInitialized) {
-        [self appendToIncomingText: @"> Unable to connect to x-IMU"];        
+        [self appendToIncomingText: @"> Unable to connect to x-IMU\n"];        
     }
     [self detectAndGetDeviceId];
     [self refreshSerialList:portName];
