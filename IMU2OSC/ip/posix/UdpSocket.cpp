@@ -227,6 +227,9 @@ public:
 	}
 
 	bool IsBound() const { return isBound_; }
+    
+    bool IsConnected() const { return isConnected_; }
+
 
     std::size_t ReceiveFrom( IpEndpointName& remoteEndpoint, char *data, std::size_t size )
 	{
@@ -297,6 +300,11 @@ void UdpSocket::Bind( const IpEndpointName& localEndpoint )
 bool UdpSocket::IsBound() const
 {
 	return impl_->IsBound();
+}
+
+bool UdpSocket::IsConnected() const
+{
+	return impl_->IsConnected();
 }
 
 std::size_t UdpSocket::ReceiveFrom( IpEndpointName& remoteEndpoint, char *data, std::size_t size )

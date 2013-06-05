@@ -118,7 +118,7 @@ public:
 	void Connect( const IpEndpointName& remoteEndpoint );	
 	void Send( const char *data, std::size_t size );
     void SendTo( const IpEndpointName& remoteEndpoint, const char *data, std::size_t size );
-
+    bool IsConnected() const;
 
 	// Bind a local endpoint to receive incoming data. Endpoint
 	// can be 'any' for the system to choose an endpoint
