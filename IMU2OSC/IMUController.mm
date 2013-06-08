@@ -21,6 +21,7 @@
 
 #define ADDRESS "127.0.0.1"
 #define PORT 7000
+#define DISPLAY_RATE 1.0 / 10.0
 
 @interface IMUController() {
     
@@ -87,7 +88,7 @@
                 
         osc_init([self.address UTF8String], (unsigned int)self.port);
         
-        timer = [NSTimer scheduledTimerWithTimeInterval:1.0/24. target:self selector:@selector(tick:) userInfo:nil repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:DISPLAY_RATE target:self selector:@selector(tick:) userInfo:nil repeats:YES];
         captureIsOn = false;
         self->ximu = NULL;
     }
