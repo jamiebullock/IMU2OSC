@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>IMU2OSC Usage</title>
+        <meta name="description" content="How to use the IMU2OSC utility" />
+        <!-- <meta name="KEYWORDS" content="x-IMU, imu2osc, foo, bar" /> -->
+		<link href="../css/style.css" rel="stylesheet" media="all" />
+		<a name="IMU2OSC_Usage"/>
+	</head>
+	<body>
+		<div id="main-heading">
+            <div id="main-heading-icon32">
+                <img id="icon32" src="../images/icon-32x32.png" alt="IMU2OSC Help Icon" height="32" width="32"/>
+            </div>
+            <div id="main-heading-title">
+                <h1>IMU2OSC Usage</h1>
+            </div>
+        </div>
+
+		<div id="help-text-area">
+
+			<div class="help-text-title">
+		        <h2>Overview</h2>
+		    </div>
+
+			<p class="help-text">IMU2OSC is a utility for receiving data from an <a class="help-text-link" href="help:anchor='xIMU_Unit' bookID=IMU2OSC Help">x-IMU unit</a> and converting it to the <a class="help-text-link" href="http://opensoundcontrol.org/spec-1_0">Open Sound Control (OSC)</a> protocol.</p>
+
+			<div class="help-text-title">
+		        <h2>Requirements</h2>
+		    </div>
+
+			<p class="help-text">In order to use this utility, the third-party <a href="http://www.ftdichip.com/Drivers/VCP.htm">FTDI Virtual COM port driver</a> must be installed. This will enable the x-IMU unit to show up as a standard serial device</p>
+        	
+        	<div class="help-text-title">
+		        <h2>Main Window</h2>
+		    </div>
+
+		    <div id="ui-screenshot">
+				<div class="ui-image">
+	            	<img src="../images/IMU2OSC-screenshot.png"/>
+	            </div>
+	            <div class="ui-image-labels">
+		            <div id="ui-image-label1"><span class="ui-image-label-number">➊</span><span class="ui-image-label-text">Target IP address and Port</span></div>
+		            <div id="ui-image-label2"><span class="ui-image-label-number">➋</span><span class="ui-image-label-text">Serial Port selection (including bluetooth) and capture toggle</span></div>
+		            <div id="ui-image-label3"><span class="ui-image-label-number">➌</span><span class="ui-image-label-text">Connection status area</span></div>
+		            <div id="ui-image-label4"><span class="ui-image-label-number">➍</span><span class="ui-image-label-text">Incoming data display area</span></div>
+	        	</div>
+	        </div>
+            
+			<p class="help-explanation"><span class="help-explanation-number">➊</span><span class="help-explanation-label">Target IP address and Port</span><span class="help-explanation-text"> — The “IP” and “Port” text boxes allow the target <a href="http://en.wikipedia.org/wiki/Ip_address">IP address</a> (IP version 4) and <a href="http://en.wikipedia.org/wiki/UDP_Port">UDP Port</a> to be set. These values can be changed on the fly.</span></p>
+
+			<p class="help-explanation"><span class="help-explanation-number">➋</span><span class="help-explanation-label">Serial Port selection (including bluetooth) and capture toggle</span><span class="help-explanation-text"> — The Serial Port dropdown menu can be used to select the serial port that IMU2OSC is capturing from. For Bluetooth connections, the port path will be of the form <code>/dev/cu.x-IMU-XXXX-SPP</code> where <code>XXXX</code> is the ID of your device. For USB connections, the port path will be of the form <code>/dev/cu.usbserial-XXXXXXXX</code>.</span></p>
+
+			<p class="help-explanation"><span class="help-explanation-text">The Capture Toggle is used to toggle data capture from the x-IMU unit. When the checbox is checked, data will captured and displayed at in the Incoming Data display area. This checkbox also toggles the sending of value over OSC — if the checkbox is checked, values will be sent. The display rate and the OSC send rate are independent. OSC values will be sent as soon as they are emitted from the device. Values are displayed in the Data Display area at a much lower rate.</span></p>			
+
+			<p class="help-explanation"><span class="help-explanation-number">➌</span><span class="help-explanation-label">Connection status area</span><span class="help-explanation-text"> — The Connection Status Area displays status messages about the connection status of the device including notification of connection attempts. If IMU2OSC has successfully connected to the device, a message of the form <code>Connected to device with ID 0xXXXX</code> will be show where XXXX is the ID of the device</span></p>
+
+			<p class="help-explanation"><span class="help-explanation-number">➍</span><span class="help-explanation-label">Incoming data display area</span><span class="help-explanation-text"> — The Incoming Data Display Area displays real-time values emitted from the x-IMU device. These correspond to readings from the device as follows:</span></p>
+
+			<ul class="help-list">
+				<li><span class="help-list-bullet">➠</span><span class="help-list-label">Euler</span> — This gives the <code>x</code>, <code>y</code> and <code>z</code> components (in degrees) of the <a href="http://en.wikipedia.org/wiki/Euler_angle">Euler angle</a> representing the <em>orientation</em> of the x-IMU</li>
+				<li><span class="help-list-bullet">➠</span><span class="help-list-label">Gyro</span> — This gives the <em>calibrated</em> values for angular velocities (in degrees per second) around the <code>x</code>, <code>y</code> and <code>z</code> axes of the x-IMU</li>
+				<li><span class="help-list-bullet">➠</span><span class="help-list-label">Mag</span> — This gives the <em>calibrated</em> values for magnetic flux (in Gauss) along the <code>x</code>, <code>y</code> and <code>z</code> axes of the x-IMU</li>
+				<li><span class="help-list-bullet">➠</span><span class="help-list-label">Accel</span> — This gives the <em>calibrated</em> values for acceleration (in ‘g’) along the <code>x</code>, <code>y</code> and <code>z</code> axes of the x-IMU</li>
+			</ul>
+
+
+			<div class="help-text-title">
+		        <h2>Troubleshooting</h2>
+		    </div>
+
+		    <div class="help-text-subtitle">
+		    	<h3>❗My device isn't showing up in the Serial Port selection menu</h3>
+		    </div>
+
+		    <p class="help-text">If your device isn't showing up try the following</>
+		    	<ul class="troubleshooting-list">
+		    		<li>Ensure thee battery is charged on the device</li>
+		    		<li>Plug the device into a different USB port</li>
+		    		<li>You have correctly paired the device via bluetooth</li>
+		    		<li>You have power cycled the device (turn off and on again)</li>
+		    	</ul>
+
+		    <div class="help-text-subtitle">
+			    <h3>❗How do I report bugs in IMU2OSC or request new features?</h3>
+			</div>
+
+		    <p class="help-text">To report a bug in IMU2OSC, ask a question, or request new features, please visit the <a href="https://github.com/jamiebullock/IMU2OSC/issues">IMU2OSC issue tracker</a></p>
+
+		    <div class="help-text-subtitle">
+		    	<h3>❗How do I get further support for my x-IMU device?</h3>
+		    </div>
+
+	    	<p class="help-text">Support for the x-IMU unit itself is provided by x-IO Technologies. Please use <a href="http://www.x-io.co.uk/contact/">their contact form</a></p>
+
+	    </div>
+	</body>
+</html>

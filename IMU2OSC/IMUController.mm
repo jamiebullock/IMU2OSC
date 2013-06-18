@@ -148,29 +148,43 @@
     unsigned int deviceid;
     
     if (!ximu->get_register(XIMU::REGISTER_ADDRESS_DeviceID, &deviceid)){
-        [self appendToIncomingText: @"> ERROR: cant fetch deviceid\n"];
+        [self appendToIncomingText: @"> ERROR: cant fetch device ID\n"];
     } else {
-        NSString *msg = [[NSString alloc] initWithFormat:@"> found device with id 0x%04X\n", deviceid];
+        NSString *msg = [[NSString alloc] initWithFormat:@"> Connected to device with ID 0x%04X\n", deviceid];
         [self appendToIncomingText:msg];
     }
     if(!self->ximu->get_device_detected()) {
-        [self appendToIncomingText: @"> no device found\n"];
+        [self appendToIncomingText: @"> No device found\n"];
     }
 }
 
-// action sent when serial port selected
 - (IBAction) serialPortSelected: (id) cntrl {
         
     NSString *portName = [serialListPullDown titleOfSelectedItem];
     const char *portName_s = [portName UTF8String];
-	// open the serial port
-	//NSString *error = [self openSerialPort: [serialListPullDown titleOfSelectedItem] baud:[baudInputField intValue]];
+	
     [self appendToIncomingText: @"> Attempting to connect to x-IMU\n"];
-    imuInitialized = self->ximu = new XIMU((char *)portName_s, XIMU::XIMU_LOGLEVEL_NONE);
-    if (!imuInitialized) {
-        [self appendToIncomingText: @"> Unable to connect to x-IMU\n"];        
+    
+    delete self->ximu;
+    self->ximu = new XIMU((char *)portName_s, XIMU::XIMU_LOGLEVEL_NONE);
+    
+    if (self->ximu == NULL) {
+        NSLog(@"error: failed to instantiate XIMU object");
+        return;
     }
-    [self detectAndGetDeviceId];
+    
+    imuInitialized = self->ximu->detect_device();
+    
+    if (!imuInitialized) {
+        [self appendToIncomingText: @"> Unable to connect to x-IMU\n"];
+        delete self->ximu;
+        self->ximu = NULL;
+    }
+    else
+    {
+        [self detectAndGetDeviceId];
+    }
+    
     [self refreshSerialList:portName];
 }
 
@@ -209,53 +223,29 @@
     double *gyro = data.gyro;
     double *accel = data.accel;
     double *mag = data.mag;
-    
-//    NSString *msg;
-    
+        
     if (euler != NULL) {
         [self.euler1 setStringValue:[NSNumber numberWithFloat:euler[0]].stringValue];
         [self.euler2 setStringValue:[NSNumber numberWithFloat:euler[1]].stringValue];
         [self.euler3 setStringValue:[NSNumber numberWithFloat:euler[2]].stringValue];
-
-//        msg = [[NSString alloc] initWithFormat:@"> euler:\t%.3f\t%.3f\t%.3f\n",
-//                         euler[0], euler[1], euler[2]];
-//        [self appendToIncomingText: msg];
     }
     if (gyro != NULL) {
         [self.gyro1 setStringValue:[NSNumber numberWithFloat:gyro[0]].stringValue];
         [self.gyro2 setStringValue:[NSNumber numberWithFloat:gyro[1]].stringValue];
         [self.gyro3 setStringValue:[NSNumber numberWithFloat:gyro[2]].stringValue];
-
-//       msg = [[NSString alloc] initWithFormat:@"> gyro:\t%.3f\t%.3f\t%.3f\n",
-//                         gyro[0], gyro[1], gyro[2]];
-//        [self appendToIncomingText: msg];
     }
     if (accel != NULL) {
         [self.accel1 setStringValue:[NSNumber numberWithFloat:accel[0]].stringValue];
         [self.accel2 setStringValue:[NSNumber numberWithFloat:accel[1]].stringValue];
         [self.accel3 setStringValue:[NSNumber numberWithFloat:accel[2]].stringValue];
-
-//        msg = [[NSString alloc] initWithFormat:@"> accel:\t%.3f\t%.3f\t%.3f\n",
-//               accel[0], accel[1], accel[2]];
-//        [self appendToIncomingText: msg];
     }
     if (mag != NULL) {
         [self.mag1 setStringValue:[NSNumber numberWithFloat:mag[0]].stringValue];
         [self.mag2 setStringValue:[NSNumber numberWithFloat:mag[1]].stringValue];
         [self.mag3 setStringValue:[NSNumber numberWithFloat:mag[2]].stringValue];
-
-//        msg = [[NSString alloc] initWithFormat:@"> mag:\t%.3f\t%.3f\t%.3f\n",
-//               mag[0], mag[1], mag[2]];
-//        [self appendToIncomingText: msg];
     }
-
 }
 
-- (IBAction)prefsClicked:(id)sender {
-    
-    
-    
-}
 
 - (IBAction)ipSet:(id)sender {
     

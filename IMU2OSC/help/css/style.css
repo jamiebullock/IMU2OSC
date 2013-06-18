@@ -1,0 +1,240 @@
+
+@font-face { 
+  font-family: ErlerDingBats;
+  src: url('file:../fonts/ErlerDingbats.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin-top: 0;
+	margin-right: 0;
+	margin-left: 2em;
+	margin-bottom: 5em;
+	background: #f2f2f2;
+}
+
+h1 {
+	color: #000;
+	font-size: 13pt;
+	line-height: 15pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	font-weight: bold;
+	margin-top: 6px;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 12pt;
+	line-height: 12pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	font-weight: bold;
+	color: #000;
+	margin-top: 0;
+	margin-bottom: 14px;
+}
+
+h3 {
+	color: #000;
+	font-size: 9pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+a {
+	font-family: "Lucida Grande", Arial, sans-serif;
+	text-decoration: none;
+	color: #778fbd;
+    line-height: 12pt;
+}
+
+p {
+	color: #000;
+	font-size: 8pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	line-height: 12pt;
+	text-decoration: none;
+	margin-left: 0px;
+	margin-top: 6px;
+	margin-bottom: 0px;
+}
+
+/* Main page */
+
+#main-heading {
+	margin-top: 36px;
+	padding-right: 6px
+}
+
+#main-heading-icon32 {
+	margin-bottom: -3px;
+	float: left
+}
+
+#main-heading-title {
+	margin-left: 40px;
+	width: 88%;
+	border: solid 1px #f2f2f2;
+}
+
+#main-help-items {
+    vertical-align: top;
+    margin-top: 1.5em;
+    width: 88%;
+    /*padding-left: 6px; */
+}
+
+.main-help-item {
+	font-size: 8pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	line-height: 12pt;
+	text-decoration: none;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+
+.main-help-link {
+	color: #778fbd;
+    font-size: 10.5pt;
+    font-weight: bold;
+}
+
+/* Individual Help Pages */
+
+#help-text-area {
+	vertical-align: top;
+    margin-top: 1.5em;
+    width: 88%;
+}
+
+.help-text-link {
+	color: #778fbd;
+    font-size: 9pt;
+}
+
+.help-text-title {
+	margin-top: 30px;
+}
+
+.help-text, .troubleshooting-list, .help-list  {
+	color: #000;
+	font-size: 9pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	line-height: 12pt;
+	text-decoration: none;
+	margin-left: 0px;
+}
+
+.help-text {
+	margin-top: 2px;
+	margin-bottom: 8px;
+}
+
+#ui-screenshot {
+	margin: 20px;
+	min-width: 12em;
+	padding-right:510px;
+	overflow:hidden;
+}
+
+#ui-screenshot::after {
+  display:block;
+  content:"";
+  clear:both;
+}
+
+.ui-image {
+	float: left;
+	width: 510px;
+	margin-right: 0px;
+}
+
+.ui-image-labels {
+    top: 34px;
+    position: relative;
+    margin: 0 -510px 0 auto; 
+    width: 100%; 
+    float:right;
+}
+
+#ui-image-label1 {
+	position: relative;
+	margin-top: 35px;
+}
+
+#ui-image-label2 {
+	position: relative;
+	margin-top: 7px;
+}
+
+#ui-image-label3 {
+	position: relative;
+	margin-top: 50px;
+}
+
+#ui-image-label4 {
+	position: relative;
+	margin-top: 110px;
+}
+
+.ui-image-label-number, .help-explanation-number {
+    font-family: ErlerDingbats;
+    font-size: 16pt;
+    color: #888;
+}
+
+.ui-image-label-text, .help-explanation-text, .help-explanation-label {
+    color: #000;
+	font-size: 9pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	line-height: 12pt;
+	text-decoration: none;
+	bottom: 2.5pt;
+	left: 1.5em;
+	position: relative;
+}
+
+.help-explanation {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: 18pt;
+}
+
+.help-explanation-label {
+	font-weight: bold;
+}
+
+.help-text-subtitle {
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.troubleshooting-list, .help-list {
+	line-height: 14pt;
+}
+
+.help-list {
+	margin-left: 4em;
+}
+
+.help-list li {
+		list-style: none;
+}
+
+.help-list-bullet {
+	float: left;
+	width: 2em;
+	color: #888;
+}
+
+.help-list-label {
+	font-weight: bold;
+}
+
+
+
+
+

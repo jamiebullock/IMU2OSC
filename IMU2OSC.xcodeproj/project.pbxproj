@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1157BD1768B917007F0CA3 /* help in Resources */ = {isa = PBXBuildFile; fileRef = 7D1157BC1768B917007F0CA3 /* help */; };
 		7D20391215664F3900D9DD6E /* IMUDataCallbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D20391115664F3900D9DD6E /* IMUDataCallbacks.cpp */; };
 		7D55D6E81609056500EE3BA6 /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */; };
 		7D55D6FC160913CF00EE3BA6 /* IMU2OSC-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D1157BC1768B917007F0CA3 /* help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = help; path = IMU2OSC/help; sourceTree = "<group>"; };
 		7D20391115664F3900D9DD6E /* IMUDataCallbacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IMUDataCallbacks.cpp; sourceTree = "<group>"; };
 		7D20391415664F4E00D9DD6E /* IMUDataCallbacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMUDataCallbacks.h; sourceTree = "<group>"; };
 		7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_thread-mt.a"; sourceTree = "<group>"; };
@@ -102,13 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D55D6F11609088300EE3BA6 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		7DEB7616175F944E0057C2A4 /* ip */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,8 +149,8 @@
 		7DF90D7E155976C10007A0AD = {
 			isa = PBXGroup;
 			children = (
+				7D1157BC1768B917007F0CA3 /* help */,
 				7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */,
-				7D55D6F11609088300EE3BA6 /* Resources */,
 				7DF90D93155976C10007A0AD /* IMU2OSC */,
 				7DF90D8C155976C10007A0AD /* Frameworks */,
 				7DF90D8A155976C10007A0AD /* Products */,
@@ -252,7 +247,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = IMU;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jamie Bullock";
 			};
 			buildConfigurationList = 7DF90D83155976C10007A0AD /* Build configuration list for PBXProject "IMU2OSC" */;
@@ -280,6 +275,7 @@
 				7DF90D98155976C10007A0AD /* InfoPlist.strings in Resources */,
 				7DF90D9E155976C10007A0AD /* Credits.rtf in Resources */,
 				7DF90DA4155976C20007A0AD /* MainMenu.xib in Resources */,
+				7D1157BD1768B917007F0CA3 /* help in Resources */,
 				7D55D6FC160913CF00EE3BA6 /* IMU2OSC-icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,8 +337,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -356,7 +357,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -368,8 +371,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -377,7 +385,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
@@ -388,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -410,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

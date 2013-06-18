@@ -1,0 +1,353 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"help",
+				"help-list"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"ui-im",
+				"ui-image-label-number"
+			],
+			[
+				"help-e",
+				"help-explanation-number"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"marg",
+				"margin-top"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"command_palette":
+	{
+		"height": 49.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"title",
+				"Convert Case: Title Case"
+			],
+			[
+				"ipsum",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"lint",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"snipp",
+				"Snippet: html"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"sid",
+				"View: Toggle Side Bar"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"syntax ja sc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: s",
+				"Package Control: Discover Packages"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jamie/Documents/IMU2OSC/IMU2OSC/help/pages/usage.html",
+		"/Users/jamie/Documents/IMU2OSC/IMU2OSC/help/css/style.css",
+		"/Users/jamie/Dropbox/Development/Design/Keynote Bundle/iPhone Templates/Your Bundle Upgrade Discount.txt",
+		"/Users/jamie/Documents/IntegraLive/libIntegra/src/luascripting.c",
+		"/Users/jamie/Documents/IntegraLive/libIntegra/libIntegra.sublime-project",
+		"/Users/jamie/Documents/IntegraLive/libIntegra/libIntegra",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/Default (OSX).sublime-keymap",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/Default (OSX).sublime-keymap",
+		"/Users/jamie/Desktop/foo/bar/baz.md",
+		"/Users/jamie/Documents/AUList/sources/test.html",
+		"/Users/jamie/Documents/AUList/sources/test.css",
+		"/Users/jamie/Desktop/test.html",
+		"/Users/jamie/Documents/AUList/sources/foo.js",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/User/JavaScript/hello.snippet",
+		"/Users/jamie/Documents/AUList/sources/hello.js",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/DashDoc/Default (OSX).sublime-keymap",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/DashDoc/DashDoc.sublime-settings",
+		"/Users/jamie/Documents/AUList/sources/AUListUtil.h",
+		"/Users/jamie/Documents/AUList/sources/AUListController.h",
+		"/Users/jamie/Documents/AUList/sources/AUListController.m",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/User/Test/untitled.snippet",
+		"/Users/jamie/.zprezto/modules/prompt/README.md",
+		"/Users/jamie/Documents/AUList/sources/AUListAppDelegate.m",
+		"/Users/jamie/Documents/AUList/sources/AUListInfo.m",
+		"/Users/jamie/Desktop/test.c",
+		"/Users/jamie/Desktop/test.py",
+		"/Users/jamie/Desktop/Hello.md",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/jamie/Library/Application Support/Sublime Text 2/Packages/Alignment/Base File.sublime-settings"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"help-explanation-text",
+			"line-height",
+			"margin",
+			"numbering",
+			"left",
+			"super+ctrl",
+			"1",
+			"eol",
+			"line",
+			"end",
+			"end of line",
+			" ",
+			"veniam,",
+			"Lorem",
+			"1",
+			"super+b",
+			"l.+m",
+			"lorem",
+			"Lorem",
+			"lorem",
+			"lore",
+			"Lore",
+			"Test",
+			"List",
+			"AUListController",
+			"List",
+			"is",
+			"The",
+			"This",
+			"this",
+			"pleth",
+			"floor",
+			"foo",
+			"auto"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"help-explanation-detail"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"loremipsum",
+				"Lorem ipsum dolor sit amet, consectetur adipisicin"
+			],
+			[
+				"tmp",
+				"{tempor incididunt ut labore et dolore magna aliqu"
+			],
+			[
+				"{temp",
+				"{tempor incididunt ut labore et dolore magna aliqu"
+			],
+			[
+				"unt",
+				"untitled"
+			],
+			[
+				"aulcn.m",
+				"AUListController.m"
+			],
+			[
+				"aulistcon",
+				"AUListController.m"
+			],
+			[
+				"auliapp",
+				"AUListAppDelegate.m"
+			],
+			[
+				".m",
+				"AUListInfo.m"
+			],
+			[
+				"au",
+				"AUListUtil.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 169.0,
+	"status_bar_visible": true
+}

@@ -17,4 +17,13 @@
     // Insert code here to initialize your application
 }
 
+- (IBAction)helpMenuItemSelector:(id)sender {
+    
+//    NSString *helpBookName = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleHelpBookName"];
+//    [[NSHelpManager sharedHelpManager] openHelpAnchor: inBook:helpBookName];
+
+    [[NSApplication sharedApplication] showHelp:nil];
+}
+
+
 @end

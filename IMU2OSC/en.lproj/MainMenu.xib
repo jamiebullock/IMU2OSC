@@ -354,12 +354,12 @@
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="582">
                         <rect key="frame" x="18" y="270" width="285" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Select Serial Port" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="583">
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="583">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="584">
                                 <items>
-                                    <menuItem title="Select Serial Port" state="on" id="585"/>
+                                    <menuItem title="Select Serial Port" id="585"/>
                                     <menuItem title="Item 2" id="586"/>
                                     <menuItem title="Item 3" id="587"/>
                                 </items>
@@ -560,35 +560,4 @@
         </customObject>
         <userDefaultsController id="1255"/>
     </objects>
-    <classes>
-        <class className="IMUAppDelegate" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMUAppDelegate.h"/>
-            <relationships>
-                <relationship kind="action" name="helpMenuItemSelector:"/>
-                <relationship kind="outlet" name="window" candidateClass="NSWindow"/>
-            </relationships>
-        </class>
-        <class className="IMUController" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMUController.h"/>
-            <relationships>
-                <relationship kind="action" name="captureOnOff:"/>
-                <relationship kind="action" name="ipSet:"/>
-                <relationship kind="action" name="portSet:"/>
-                <relationship kind="action" name="prefsClicked:"/>
-                <relationship kind="action" name="serialPortSelected:"/>
-                <relationship kind="outlet" name="serialListPullDown" candidateClass="NSPopUpButton"/>
-                <relationship kind="outlet" name="serialOutputArea" candidateClass="NSTextView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NSTextView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSTextView.h"/>
-            <relationships>
-                <relationship kind="action" name="orderFrontSharingServicePicker:"/>
-                <relationship kind="action" name="toggleQuickLookPreviewPanel:"/>
-            </relationships>
-        </class>
-    </classes>
 </document>
