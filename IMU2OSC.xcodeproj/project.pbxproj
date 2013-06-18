@@ -248,7 +248,12 @@
 			attributes = {
 				CLASSPREFIX = IMU;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Jamie Bullock";
+				ORGANIZATIONNAME = "Birmingham City University";
+				TargetAttributes = {
+					7DF90D88155976C10007A0AD = {
+						DevelopmentTeam = EPCRL4G5JW;
+					};
+				};
 			};
 			buildConfigurationList = 7DF90D83155976C10007A0AD /* Build configuration list for PBXProject "IMU2OSC" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -398,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
@@ -411,6 +417,7 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/IMU2OSC-bsnxvbnkuxyobjgqgomlngaeiqbe/Build/Products/Debug/IMU2OSC.app/Contents/Frameworks\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
@@ -421,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
@@ -434,6 +442,7 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/IMU2OSC-bsnxvbnkuxyobjgqgomlngaeiqbe/Build/Products/Debug/IMU2OSC.app/Contents/Frameworks\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
