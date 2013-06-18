@@ -72,6 +72,10 @@
                     <menu key="submenu" title="Help" systemMenu="help" id="491">
                         <items>
                             <menuItem title="IMU2OSC Help" keyEquivalent="?" id="492"/>
+                            <menuItem isSeparatorItem="YES" id="tLz-vf-z6J"/>
+                            <menuItem title="Support" id="Xtz-nH-FO1">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>
@@ -529,6 +533,7 @@
         <customObject id="494" customClass="IMUAppDelegate">
             <connections>
                 <action selector="helpMenuItemSelector:" destination="492" id="gqR-de-4pi"/>
+                <action selector="supportMenuItemSelector:" destination="Xtz-nH-FO1" id="taS-ry-YHx"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
@@ -560,4 +565,35 @@
         </customObject>
         <userDefaultsController id="1255"/>
     </objects>
+    <classes>
+        <class className="IMUAppDelegate" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMUAppDelegate.h"/>
+            <relationships>
+                <relationship kind="action" name="helpMenuItemSelector:"/>
+                <relationship kind="action" name="supportMenuItemSelector:"/>
+                <relationship kind="outlet" name="window" candidateClass="NSWindow"/>
+            </relationships>
+        </class>
+        <class className="IMUController" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IMUController.h"/>
+            <relationships>
+                <relationship kind="action" name="captureOnOff:"/>
+                <relationship kind="action" name="ipSet:"/>
+                <relationship kind="action" name="portSet:"/>
+                <relationship kind="action" name="serialPortSelected:"/>
+                <relationship kind="outlet" name="serialListPullDown" candidateClass="NSPopUpButton"/>
+                <relationship kind="outlet" name="serialOutputArea" candidateClass="NSTextView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NSTextView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSTextView.h"/>
+            <relationships>
+                <relationship kind="action" name="orderFrontSharingServicePicker:"/>
+                <relationship kind="action" name="toggleQuickLookPreviewPanel:"/>
+            </relationships>
+        </class>
+    </classes>
 </document>

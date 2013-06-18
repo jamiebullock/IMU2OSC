@@ -17,12 +17,14 @@
     // Insert code here to initialize your application
 }
 
-- (IBAction)helpMenuItemSelector:(id)sender {
-    
-//    NSString *helpBookName = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleHelpBookName"];
-//    [[NSHelpManager sharedHelpManager] openHelpAnchor: inBook:helpBookName];
-
+- (IBAction)helpMenuItemSelector:(id)sender
+{
     [[NSApplication sharedApplication] showHelp:nil];
+}
+
+- (IBAction)supportMenuItemSelector:(id)sender
+{
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/jamiebullock/IMU2OSC/issues"]];
 }
 
 
