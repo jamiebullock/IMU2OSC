@@ -10,6 +10,8 @@
 	<dict>
 		<key>8028BC10-E081-4BDC-BA96-1B0C1118B9D2</key>
 		<string>ssh://github.com/jamiebullock/IMU2OSC.git</string>
+		<key>F4B8ED7F-DFD3-439B-87BF-AC4BC06FC650</key>
+		<string>https://github.com/andymatuschak/Sparkle.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>IMU2OSC.xcodeproj/project.xcworkspace</string>
@@ -17,6 +19,8 @@
 	<dict>
 		<key>8028BC10-E081-4BDC-BA96-1B0C1118B9D2</key>
 		<string>../..</string>
+		<key>F4B8ED7F-DFD3-439B-87BF-AC4BC06FC650</key>
+		<string>../../Sparkle</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/jamiebullock/IMU2OSC.git</string>
@@ -33,6 +37,14 @@
 			<string>8028BC10-E081-4BDC-BA96-1B0C1118B9D2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>IMU2OSC</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F4B8ED7F-DFD3-439B-87BF-AC4BC06FC650</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Sparkle</string>
 		</dict>
 	</array>
 </dict>

@@ -47,7 +47,7 @@
 		7D20391115664F3900D9DD6E /* IMUDataCallbacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IMUDataCallbacks.cpp; sourceTree = "<group>"; };
 		7D20391415664F4E00D9DD6E /* IMUDataCallbacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMUDataCallbacks.h; sourceTree = "<group>"; };
 		7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_thread-mt.a"; sourceTree = "<group>"; };
-		7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "IMU2OSC-icon.icns"; sourceTree = "<group>"; };
+		7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "IMU2OSC-icon.icns"; sourceTree = SOURCE_ROOT; };
 		7D7FB247156662AC003C03FC /* IMUOSCHandlers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IMUOSCHandlers.cpp; sourceTree = "<group>"; };
 		7D7FB249156662C5003C03FC /* IMUOSCHandlers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMUOSCHandlers.h; sourceTree = "<group>"; };
 		7DD23211155BE17B00C012B4 /* XIMU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIMU.h; sourceTree = "<group>"; };
@@ -104,6 +104,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D2A8CE617730DF60081B97C /* External */ = {
+			isa = PBXGroup;
+			children = (
+				7DEB7616175F944E0057C2A4 /* ip */,
+				7DEB7623175F944E0057C2A4 /* osc */,
+				7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
 		7DEB7616175F944E0057C2A4 /* ip */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +125,8 @@
 				7DEB761E175F944E0057C2A4 /* TimerListener.h */,
 				7DEB761F175F944E0057C2A4 /* UdpSocket.h */,
 			);
-			path = ip;
+			name = ip;
+			path = IMU2OSC/ip;
 			sourceTree = "<group>";
 		};
 		7DEB761B175F944E0057C2A4 /* posix */ = {
@@ -143,14 +154,15 @@
 				7DEB762E175F944E0057C2A4 /* OscTypes.cpp */,
 				7DEB762F175F944E0057C2A4 /* OscTypes.h */,
 			);
-			path = osc;
+			name = osc;
+			path = IMU2OSC/osc;
 			sourceTree = "<group>";
 		};
 		7DF90D7E155976C10007A0AD = {
 			isa = PBXGroup;
 			children = (
 				7D1157BC1768B917007F0CA3 /* help */,
-				7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */,
+				7D2A8CE617730DF60081B97C /* External */,
 				7DF90D93155976C10007A0AD /* IMU2OSC */,
 				7DF90D8C155976C10007A0AD /* Frameworks */,
 				7DF90D8A155976C10007A0AD /* Products */,
@@ -168,22 +180,13 @@
 		7DF90D8C155976C10007A0AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */,
+				7DF90D92155976C10007A0AD /* Foundation.framework */,
+				7DF90D91155976C10007A0AD /* CoreData.framework */,
 				7DD23214155BF04B00C012B4 /* IOKit.framework */,
 				7DF90D8D155976C10007A0AD /* Cocoa.framework */,
-				7DF90D8F155976C10007A0AD /* Other Frameworks */,
+				7DF90D90155976C10007A0AD /* AppKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7DF90D8F155976C10007A0AD /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7DF90D90155976C10007A0AD /* AppKit.framework */,
-				7DF90D91155976C10007A0AD /* CoreData.framework */,
-				7DF90D92155976C10007A0AD /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		7DF90D93155976C10007A0AD /* IMU2OSC */ = {
@@ -206,8 +209,7 @@
 		7DF90D94155976C10007A0AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7DEB7616175F944E0057C2A4 /* ip */,
-				7DEB7623175F944E0057C2A4 /* osc */,
+				7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */,
 				7DD23212155BE18D00C012B4 /* XIMU.cpp */,
 				7DD23211155BE17B00C012B4 /* XIMU.h */,
 				7DF90D95155976C10007A0AD /* IMU2OSC-Info.plist */,
