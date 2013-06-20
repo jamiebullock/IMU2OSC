@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7D1157BD1768B917007F0CA3 /* help in Resources */ = {isa = PBXBuildFile; fileRef = 7D1157BC1768B917007F0CA3 /* help */; };
 		7D20391215664F3900D9DD6E /* IMUDataCallbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D20391115664F3900D9DD6E /* IMUDataCallbacks.cpp */; };
+		7D3969431773373B00D2FE0D /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3969421773373B00D2FE0D /* Sparkle.framework */; };
+		7D3969441773398500D2FE0D /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7D3969421773373B00D2FE0D /* Sparkle.framework */; };
 		7D55D6E81609056500EE3BA6 /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */; };
 		7D55D6FC160913CF00EE3BA6 /* IMU2OSC-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */; };
 		7D7FB248156662AC003C03FC /* IMUOSCHandlers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D7FB247156662AC003C03FC /* IMUOSCHandlers.cpp */; };
@@ -37,6 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7D3969441773398500D2FE0D /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +49,7 @@
 		7D1157BC1768B917007F0CA3 /* help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = help; path = IMU2OSC/help; sourceTree = "<group>"; };
 		7D20391115664F3900D9DD6E /* IMUDataCallbacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IMUDataCallbacks.cpp; sourceTree = "<group>"; };
 		7D20391415664F4E00D9DD6E /* IMUDataCallbacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMUDataCallbacks.h; sourceTree = "<group>"; };
+		7D3969421773373B00D2FE0D /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_thread-mt.a"; sourceTree = "<group>"; };
 		7D55D6FB160913CF00EE3BA6 /* IMU2OSC-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "IMU2OSC-icon.icns"; sourceTree = SOURCE_ROOT; };
 		7D7FB247156662AC003C03FC /* IMUOSCHandlers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IMUOSCHandlers.cpp; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				7DD23215155BF04B00C012B4 /* IOKit.framework in Frameworks */,
 				7DF90D8E155976C10007A0AD /* Cocoa.framework in Frameworks */,
 				7D55D6E81609056500EE3BA6 /* libboost_thread-mt.a in Frameworks */,
+				7D3969431773373B00D2FE0D /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,7 @@
 		7D2A8CE617730DF60081B97C /* External */ = {
 			isa = PBXGroup;
 			children = (
+				7D3969421773373B00D2FE0D /* Sparkle.framework */,
 				7DEB7616175F944E0057C2A4 /* ip */,
 				7DEB7623175F944E0057C2A4 /* osc */,
 				7D55D6E71609056500EE3BA6 /* libboost_thread-mt.a */,
@@ -231,6 +237,8 @@
 				7D55D6C91608A57C00EE3BA6 /* CopyFiles */,
 				7DF90D85155976C10007A0AD /* Sources */,
 				7DF90D86155976C10007A0AD /* Frameworks */,
+				7D3969451773785400D2FE0D /* ShellScript */,
+				7D3969461773788A00D2FE0D /* ShellScript */,
 				7DF90D87155976C10007A0AD /* Resources */,
 			);
 			buildRules = (
@@ -288,6 +296,35 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D3969451773785400D2FE0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "VERSIONNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nNEWSUBVERSION=`echo $VERSIONNUM | awk -F \".\" '{print $3}'`\nNEWSUBVERSION=$(($NEWSUBVERSION + 1))\nNEWVERSIONSTRING=`echo $VERSIONNUM | awk -F \".\" '{print $1 \".\" $2 \".'$NEWSUBVERSION'\" }'`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+		7D3969461773788A00D2FE0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7DF90D85155976C10007A0AD /* Sources */ = {
@@ -407,6 +444,10 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -432,6 +473,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IMU2OSC/IMU2OSC-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
