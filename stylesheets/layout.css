@@ -17,26 +17,170 @@
 /* #Site Styles
 ================================================== */
 
+code {
+	font-family: Inconsolata, "Bitstream Vera Sans Mono", "Andale Mono", Monaco, "DejaVu Sans Mono", "Lucida Console", monospace;
+ 	font-weight: normal;
+ }
+
+a#download-button {
+	font-size: 14pt;
+	margin-top: 2px;
+}
+
+.center {text-align: center;}
+
+span.osc-address {font-weight: 600;}
+
+div.code-panel {
+	background-color: #eee;
+	border-radius: 4px;
+	margin-top: 4px;
+	padding: 12px;
+	box-shadow: inset 0px 0px 2px 2px #efefef,
+			inset 0px 0px 2px 2px #efefef,
+			inset 0px 0px 2px 2px #efefef;
+	border: 1px #ccc solid;			
+	text-shadow: 0px 1px 2px #efefef;
+	font-size: 10.5pt;
+}
+
+img#fork-me {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+	width: 149px;
+	height: 149px;
+	}
+	
+img#title-icon {
+	height: 37px;
+	width: 46px;
+	padding-right: 2px;
+}
+
+div#features {
+	margin-top: 18px;
+}
+
+ol#feature-list {
+ 	font-family: ErlerDingbats;
+	list-style:none;
+	font-size: 18pt;
+	color: #888;
+	margin-top: 47px;
+}
+
+li#feature-number1 {
+	position: relative;
+	top: 0px;
+}
+
+li#feature-number2 {
+	position: relative;
+	margin-top: 10px;
+}
+
+li#feature-number3 {
+	position: relative;
+	margin-top: 55px;
+}
+
+li#feature-number4 {
+	position: relative;
+	margin-top: 120px;
+}
+
+li#feature-number1:before {
+	content: "➊";
+}
+
+li#feature-number2:before {
+	content: "➋";
+}
+
+li#feature-number3:before {
+	content: "➌";
+}
+
+li#feature-number4:before {
+	content: "➍";
+}
+
+span.callout {
+	font-weight: bold;
+}
+
+div.feature-label {
+	font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: inline-block; 
+	color: #444;
+	position: relative;
+	vertical-align: middle;
+ 	padding-left: 1em; 
+}
+
+img#screenshot {
+	-moz-box-shadow:    3px 3px 5px 6px #ccc;
+	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+	box-shadow:         3px 3px 6px 6px #ddd;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+	border-bottom-left-radius: 3px 3px;
+	border-bottom-right-radius: 3px 3px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: auto;
+}
+
+div#footer {
+	text-align: center;
+	margin-bottom: 35px;
+}
+
 /* #Page Styles
 ================================================== */
+
+
+
 
 /* #Media Queries
 ================================================== */
 
 	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {}
+	@media only screen and (max-width: 959px) {
+		
+			
+	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
 	@media only screen and (min-width: 768px) and (max-width: 959px) {}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
+		
+		div#features, li#feature-number1, li#feature-number2, li#feature-number3, li#feature-number4, ol#feature-list {
+			position: relative;
+			top: 0px;
+			margin-top: 0px;
+		}	
+		img#screenshot {
+			-moz-box-shadow:    none;
+			-webkit-box-shadow: none;
+			box-shadow:         none;
+		}
+		.center {text-align: left;}
+
+		
+	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+	@media only screen and (max-width: 479px) {
+		
+	}
 
 
 /* #Font-Face
@@ -45,6 +189,14 @@
 		Just create a "fonts" folder at the root,
 		copy your FontName into code below and remove
 		comment brackets */
+		
+		@font-face { 
+		  font-family: ErlerDingBats;
+		  src: url('file:../fonts/ErlerDingbats.ttf') format('truetype');
+		  font-weight: normal;
+		  font-style: normal;
+		}
+
 
 /*	@font-face {
 	    font-family: 'FontName';

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>IMU2OSC</title>
+	<meta name="description" content="">
+	<meta name="author" content="Jamie Bullock">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+	<a href="https://github.com/jamiebullock/IMU2OSC"><img id="fork-me" src="images/right-dusk-blue@2x.png" alt="Fork me on GitHub"></a>
+
+	<div class="container">
+		<div class="sixteen columns add-half-bottom">
+			
+			<h1 class="center remove-bottom" style="margin-top: 40px"><img src="images/icon-64x64.png" id="title-icon"/>IMU2OSC</h1>
+			
+			<h5 class="center">A simple utility for sending <a href="http://www.x-io.co.uk/products/">x-IMU</a> data over <a href="http://opensoundcontrol.org/spec-1_0">OSC</a></h5>
+			<hr/>
+		
+		</div>
+			
+		<div class="six columns offset-by-five add-bottom">
+			<a href="http://integralive.org/IMU2OSC/download.html" class="full-width button remove-bottom" id="download-button">Download</a>
+			<div class="center"><small>Download IMU2OSC for OS X 10.7 or Later</small></div>
+		</div>
+		
+		<div class="fourteen columns offset-by-one">
+		
+			<h2 class="center">Requirements</h2>
+		
+			<p class="center">In order to use this utility, the third-party <a href="http://www.ftdichip.com/Drivers/VCP.htm">FTDI Virtual COM port driver</a> must be installed. <!-- This will enable the x-IMU unit to show up as a standard serial device in the IMU2OSC device selection drop-down list.--></p>
+
+		</div>
+		
+		<div class="sixteen columns add-bottom">
+			
+			<h2 class="center">Usage</h2>
+
+			<div class="seven columns offset-by-one add-bottom">
+				
+				<img id="screenshot" src="images/IMU2OSC-screenshot.png"/>
+			
+			</div>
+			
+			<div class="six columns">
+	 			<ol id="feature-list">
+					<li id="feature-number1"><div class="feature-label">Set target IP address and Port</div></li>
+					<li id="feature-number2"><div class="feature-label">Select device via USB or Bluetooth</div></li>
+					<li id="feature-number3"><div class="feature-label">View connection status</div></li>
+					<li id="feature-number4"><div class="feature-label">Visualise incoming data</div></li>
+				</ol>
+			</div>
+			
+			<div class="fourteen columns offset-by-one">
+				<ul>
+					<li><span class="callout">Euler</span> — gives the <code>x</code>, <code>y</code> and <code>z</code> components (in degrees) of the <a href="http://en.wikipedia.org/wiki/Euler_angle">Euler angle</a> representing the <em>orientation</em> of the x-IMU</li>
+					<li><span class="callout">Gyro</span> —  gives the <em>calibrated</em> values for angular velocities (in degrees per second) around the <code>x</code>, <code>y</code> and <code>z</code> axes of the x-IMU</li>
+					<li><span class="callout">Mag</span> — gives the <em>calibrated</em> magnetometer values for magnetic flux (in Gauss) along the <code>x</code>, <code>y</code> and <code>z</code> axes of the x-IMU</li>
+					<li><span class="callout">Accel</span> — gives the <em>calibrated</em> accelerometer values for acceleration (in ‘g’) along the <code>x</code>, <code>y</code> and <code>z</code> axes of the x-IMU</li>
+				</ul>
+			</div>
+			
+		</div>
+				
+		<div class="fourteen columns offset-by-one add-bottom">
+			<h2 class="center">OSC Messaging</h2>
+
+			<p>When the IMU2OSC <code>Capture</code> box is checked, a stream of OSC messages will be sent the target host using the following format:</p>
+
+			<div class="twelve columns offset-by-one add-bottom">
+				<div class="code-panel">
+					<code><span class="osc-address">/x-imu/calibrated</span> [gyroscope X] [Y] [Z] [accelerometer X] [Y] [Z] [magnetometer X] [Y] [Z]</code>
+					<br/>
+					<code><span class="osc-address">/x-imu/euler</span> [euler X] [Y] [Z]</code>
+				</div>
+				
+			</div>
+		
+		</div>
+			
+		<div class="sixteen columns">
+			<hr/>
+			<div id="footer">IMU2OSC was developed by <a href="http://jamiebullock.com">Jamie Bullock</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;Copyright &copy;2013 <a href="http://www.conservatoire.bcu.ac.uk">Birmingham City University</a></div>
+			
+		</div>		
+				
+			
+
+	</div><!-- container -->
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
