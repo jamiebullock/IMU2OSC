@@ -134,8 +134,12 @@ img#screenshot {
 }
 
 div#footer {
-	text-align: center;
-	margin-bottom: 35px;
+/* 	text-align: center;
+ */	margin-bottom: 80px;
+}
+
+div#footer-right {
+	text-align: right;
 }
 
 /* #Page Styles
