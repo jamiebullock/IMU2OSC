@@ -184,7 +184,11 @@ h1 {
 		}
 		img#screenshot {
 			width: 100%;
-			}
+		}
+		div#footer-right {
+			text-align: left;
+		}
+
 
 
 	}
