@@ -51,7 +51,8 @@ img#fork-me {
 	border: 0;
 	width: 149px;
 	height: 149px;
-	}
+	z-index: 1000;
+}
 	
 img#title-icon {
 	height: 37px;
