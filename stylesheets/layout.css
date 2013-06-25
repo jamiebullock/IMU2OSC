@@ -44,7 +44,7 @@ div.code-panel {
 	font-size: 10.5pt;
 }
 
-img#fork-me {
+#fork-me img {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -52,6 +52,11 @@ img#fork-me {
 	width: 149px;
 	height: 149px;
 	z-index: 1000;
+	visibility: visible;
+}
+
+#fork-me a {
+	visibility: hidden;
 }
 	
 img#title-icon {
@@ -180,8 +185,15 @@ h1 {
 		}
 		.center {text-align: left;}
 
-		img#fork-me {
+		#fork-me img {
 			visibility: hidden;
+		}
+		#fork-me a {
+			visibility: visible;
+			right: 3%;
+			top: 1%;
+			position: absolute;
+			z-index: 1000;
 		}
 		img#screenshot {
 			width: 100%;
